@@ -2,14 +2,13 @@
 
 # debundle
 
-Added Windows 10 support, and coded in Typescript, Visual Studio.
-Windows path.sep = '\'
+Added Windows 10 supports path seperators, and coded in Typescript, Visual Studio.
 
 ```
 $ debundle -i bundle.js -o dist\ -c debundle.config.json
 ```
 
-## Patched escodegen
+### Patched escodegen
 ```
     function generateRegExp(reg) {
         var match, result, flags, i, iz, ch, characterInBrack, previousIsBackslash;
@@ -17,6 +16,7 @@ $ debundle -i bundle.js -o dist\ -c debundle.config.json
         result = reg && reg.toString();
 
         if (reg && reg.source) {
+		...
 ```
 for no reason, it works.
 The rest should be the same.
