@@ -2,14 +2,14 @@
 
 # debundle
 
-Add Windows 10 support, and coded in typescript Visual Studio.
+Added Windows 10 support, and coded in Typescript, Visual Studio.
 Windows path.sep = '\'
 
 ```
 $ debundle -i bundle.js -o dist\ -c debundle.config.json
 ```
 
-##Patched escodegen
+## Patched escodegen
 ```
     function generateRegExp(reg) {
         var match, result, flags, i, iz, ch, characterInBrack, previousIsBackslash;
