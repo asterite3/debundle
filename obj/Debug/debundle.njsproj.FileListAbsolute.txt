@@ -1,0 +1,2 @@
+D:\Developments\debundle\debundle\obj\Debug\debundle.njsproj.CoreCompileInputs.cache
+D:\Developments\debundle\debundle\bin\Microsoft.NodejsTools.WebRole.dll

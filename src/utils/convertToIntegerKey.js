@@ -1,19 +1,22 @@
-function convertToIntegerKey(obj, gracefulFailure=true) {
-  return Object.keys(obj).reduce((acc, i) => {
-    let key = parseInt(i);
-    let value = obj[i];
-
-    if (!isNaN(key)) {
-      key = i; // Just make the key the same as it was before
-    } else if (isNaN(key) && gracefulFailure) {
-      key = i; // Just make the key the same as it was before
-    } else {
-      throw new Error(`Key ${i} isn't an integer!`);
-    }
-
-    acc[key] = value;
-    return acc;
-  }, {});
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function convertToIntegerKey(obj, gracefulFailure = true) {
+    return Object.keys(obj).reduce((acc, i) => {
+        let key = parseInt(i);
+        let value = obj[i];
+        if (!isNaN(key)) {
+            key = +i; // Just make the key the same as it was before
+        }
+        else if (isNaN(key) && gracefulFailure) {
+            key = +i; // Just make the key the same as it was before
+        }
+        else {
+            throw new Error(`Key ${i} isn't an integer!`);
+        }
+        acc[key] = value;
+        return acc;
+    }, {});
 }
-
-module.exports = convertToIntegerKey;
+exports.convertToIntegerKey = convertToIntegerKey;
+//module.exports = convertToIntegerKey;
+//# sourceMappingURL=convertToIntegerKey.js.map
